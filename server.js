@@ -12,6 +12,7 @@ app.get("/api", (req, res) => {
     res.send(users);
 })
 
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/parkspace-client/build', 'index.html'));
 });
