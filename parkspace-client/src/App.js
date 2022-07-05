@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import Navigation from './components/Navigation'
 
 function App() {
 
@@ -10,12 +11,13 @@ function App() {
     ).then(
       data => setBackendData(data)
     )
-  }, [])
+  }, []);
 
   return (
-    <div>
-      <a href='/pages'>Go here...</a>
-      <h1>Below are the currently available user accounts {backendData.names}</h1>
+    <>
+      <Navigation />
+      <a href='/pages'>Go here.....</a>
+      <h1>Below are the currently s user accounts {backendData.names}</h1>
       {
         (typeof backendData.names === "undefined") ? 
         ( <p>Loading....</p>) :
@@ -23,7 +25,7 @@ function App() {
           <h3 key={i}>{user}</h3>
         )))
       }
-    </div>
+    </>
   )
 }
 
