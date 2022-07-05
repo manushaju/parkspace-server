@@ -3,7 +3,7 @@ const path = require('path')
 const app = express();
 
 let users = {
-    "names": ["userOne", "userTwo", "userThree", "userFour", "shaju"]
+    "names": ["userOne", "userTwo", "userThree", "userFour", "manu"]
 }
 
 let page2 = {
