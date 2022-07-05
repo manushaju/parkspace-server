@@ -6,10 +6,18 @@ let users = {
     "names": ["userOne", "userTwo", "userThree", "userFour", "manu"]
 }
 
+let page2 = {
+    "hello": [1,2,3,4,5,6,7,8,9],
+};
+
 app.use(express.static(path.join(__dirname, "/parkspace-client/build")));
 
 app.get("/api", (req, res) => {
     res.send(users);
+})
+
+app.get("/pages", (req,res) => {
+    res.send(page2);
 })
 
 

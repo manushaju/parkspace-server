@@ -14,6 +14,7 @@ function App() {
 
   return (
     <div>
+      <a href='/pages'>Go here...</a>
       <h1>Below are the currently available user accounts {backendData.names}</h1>
       {
         (typeof backendData.names === "undefined") ? 
