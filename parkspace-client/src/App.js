@@ -1,5 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+
+import {Outlet, Link} from 'react-router-dom';
 
 function App() {
 
@@ -16,8 +19,7 @@ function App() {
   return (
     <>
       <Navigation />
-      <a href='/pages'>Go here.....</a>
-      <h1>Below are the currently s user accounts {backendData.names}</h1>
+      <h1>Below are the currently user accounts {backendData.names}</h1>
       {
         (typeof backendData.names === "undefined") ? 
         ( <p>Loading....</p>) :
@@ -25,6 +27,8 @@ function App() {
           <h3 key={i}>{user}</h3>
         )))
       }
+      <Outlet />
+      <Footer />
     </>
   )
 }
